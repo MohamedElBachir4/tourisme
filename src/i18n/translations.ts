@@ -15,11 +15,11 @@ const en: Dictionary = {
     skip: "Skip to content",
   },
   brand: {
-    name: "Azul",
-    tagline: "Sustainable travel",
+    name: "Sirius Trail",
+    tagline: "Green tourism",
   },
   hero: {
-    eyebrow: "Algeria · Sustainable travel",
+    eyebrow: "Follow the star · Your compass for green tourism",
     titleLead: "Discover Nature.",
     titleAccent: "Travel Responsibly.",
     description:
@@ -27,7 +27,7 @@ const en: Dictionary = {
     primaryCta: "Explore Destinations",
     secondaryCta: "Plan Your Journey",
     scroll: "Scroll",
-    alt: "Sunset over the dunes of Taghit, in the Algerian Sahara.",
+    alt: "A green mountain stream and forest in Ouacif, Kabylia, Algeria.",
   },
   intro: {
     eyebrow: "Our approach",
@@ -198,7 +198,7 @@ const en: Dictionary = {
   },
   footer: {
     description:
-      "Azul introduces Algeria through careful journeys, local hosts, and landscapes worth protecting.",
+      "Sirius Trail introduces Algeria through careful journeys, local hosts, and landscapes worth protecting.",
     explore: "Explore",
     prepare: "Prepare",
     places: "Places",
@@ -209,9 +209,9 @@ const en: Dictionary = {
     phoneLabel: "Phone",
     addressLabel: "Studio",
     address: "Algiers, Algeria",
-    instagram: "Azul on Instagram",
-    facebook: "Azul on Facebook",
-    youtube: "Azul on YouTube",
+    instagram: "Sirius Trail on Instagram",
+    facebook: "Sirius Trail on Facebook",
+    youtube: "Sirius Trail on YouTube",
   },
   placeholder: {
     eyebrow: "Later release",
@@ -237,11 +237,11 @@ const fr: Dictionary = {
     skip: "Aller au contenu",
   },
   brand: {
-    name: "Azul",
-    tagline: "Voyage durable",
+    name: "Sirius Trail",
+    tagline: "Tourisme vert",
   },
   hero: {
-    eyebrow: "Algérie · Voyage durable",
+    eyebrow: "Suivez l'étoile · Votre boussole pour un tourisme vert",
     titleLead: "Découvrez la nature.",
     titleAccent: "Voyagez autrement.",
     description:
@@ -249,7 +249,7 @@ const fr: Dictionary = {
     primaryCta: "Explorer les destinations",
     secondaryCta: "Planifier votre voyage",
     scroll: "Défiler",
-    alt: "Coucher de soleil sur les dunes de Taghit, dans le Sahara algérien.",
+    alt: "Ruisseau de montagne et forêt verdoyante à Ouacif, en Kabylie, Algérie.",
   },
   intro: {
     eyebrow: "Notre approche",
@@ -421,7 +421,7 @@ const fr: Dictionary = {
   },
   footer: {
     description:
-      "Azul fait découvrir l'Algérie par des itinéraires attentifs, des hôtes locaux et des paysages à protéger.",
+      "Sirius Trail fait découvrir l'Algérie par des itinéraires attentifs, des hôtes locaux et des paysages à protéger.",
     explore: "Explorer",
     prepare: "Préparer",
     places: "Lieux",
@@ -433,9 +433,9 @@ const fr: Dictionary = {
     phoneLabel: "Téléphone",
     addressLabel: "Atelier",
     address: "Alger, Algérie",
-    instagram: "Azul sur Instagram",
-    facebook: "Azul sur Facebook",
-    youtube: "Azul sur YouTube",
+    instagram: "Sirius Trail sur Instagram",
+    facebook: "Sirius Trail sur Facebook",
+    youtube: "Sirius Trail sur YouTube",
   },
   placeholder: {
     eyebrow: "Prochaine étape",
@@ -461,11 +461,11 @@ const ar: Dictionary = {
     skip: "تخطَّ إلى المحتوى",
   },
   brand: {
-    name: "أزول",
-    tagline: "سفر مستدام",
+    name: "Sirius Trail",
+    tagline: "سياحة خضراء",
   },
   hero: {
-    eyebrow: "الجزائر · سفر مستدام",
+    eyebrow: "اتبع النجمة · بوصلتك للسياحة الخضراء",
     titleLead: "اكتشف جمال الطبيعة...",
     titleAccent: "وسافر بمسؤولية",
     description:
@@ -473,7 +473,7 @@ const ar: Dictionary = {
     primaryCta: "استكشف الوجهات",
     secondaryCta: "خطط رحلتك",
     scroll: "مرّر",
-    alt: "غروب الشمس على كثبان تاغيت في الصحراء الجزائرية.",
+    alt: "مجرى جبلي وغابة خضراء في واسيف بالقبائل، الجزائر.",
   },
   intro: {
     eyebrow: "نهجنا",
@@ -639,7 +639,7 @@ const ar: Dictionary = {
   },
   footer: {
     description:
-      "تعرّف أزول بالجزائر عبر رحلات متأنية ومضيفين محليين ومناظر تستحق الحماية.",
+      "تعرّف Sirius Trail بالجزائر عبر رحلات متأنية ومضيفين محليين ومناظر تستحق الحماية.",
     explore: "استكشف",
     prepare: "جهّز",
     places: "الأماكن",
@@ -650,9 +650,9 @@ const ar: Dictionary = {
     phoneLabel: "الهاتف",
     addressLabel: "المقر",
     address: "الجزائر العاصمة، الجزائر",
-    instagram: "أزول على إنستغرام",
-    facebook: "أزول على فيسبوك",
-    youtube: "أزول على يوتيوب",
+    instagram: "Sirius Trail على إنستغرام",
+    facebook: "Sirius Trail على فيسبوك",
+    youtube: "Sirius Trail على يوتيوب",
   },
   placeholder: {
     eyebrow: "مرحلة لاحقة",

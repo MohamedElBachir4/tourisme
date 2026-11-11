@@ -11,17 +11,17 @@ export function Hero() {
   return (
     <section id="top" className="relative flex min-h-svh items-end overflow-hidden bg-charcoal">
       <Image
-        src="/images/dunes.jpg"
+        src="/images/hero-green.jpg"
         alt={t.hero.alt}
         fill
         priority
         sizes="100vw"
         className="object-cover"
-        style={{ objectPosition: "center 58%" }}
+        style={{ objectPosition: "center 42%" }}
       />
-      <div className="absolute inset-0 bg-charcoal/25" />
+      <div className="absolute inset-0 bg-charcoal/35" />
       <div className="absolute inset-x-0 top-0 h-56 bg-gradient-to-b from-charcoal/90 via-charcoal/45 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/25 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/30 to-transparent" />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-28 pt-32 sm:px-8 lg:pb-32">
         <div className="hero-rise max-w-4xl">

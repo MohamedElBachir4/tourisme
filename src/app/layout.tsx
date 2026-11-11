@@ -27,8 +27,8 @@ const arabic = IBM_Plex_Sans_Arabic({
 
 export const metadata: Metadata = {
   title: {
-    default: "Azul — Discover Nature. Travel Responsibly.",
-    template: "%s · Azul",
+    default: "Sirius Trail — Discover Nature. Travel Responsibly.",
+    template: "%s · Sirius Trail",
   },
   description:
     "Explore extraordinary destinations in Algeria, experience authentic local cultures, and travel in a way that respects the planet.",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     "Taghit",
   ],
   openGraph: {
-    title: "Azul — Discover Nature. Travel Responsibly.",
+    title: "Sirius Trail — Discover Nature. Travel Responsibly.",
     description:
       "Explore extraordinary destinations in Algeria and travel in a way that respects the planet.",
     type: "website",
