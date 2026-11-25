@@ -6,6 +6,8 @@ import {
   getTripsByDestination,
 } from "@/lib/data";
 
+export const instant = false;
+
 type PageProps = {
   params: Promise<{ slug: string }>;
 };

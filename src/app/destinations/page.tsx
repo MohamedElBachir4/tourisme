@@ -2,6 +2,8 @@ import { DestinationsBrowser } from "@/components/destinations/DestinationsBrows
 import { DestinationsPageShell } from "@/components/destinations/DestinationsPageShell";
 import { getDestinations } from "@/lib/data";
 
+export const instant = false;
+
 export const metadata = {
   title: "Destinations",
   description: "Explore sustainable tourism destinations across Algeria.",

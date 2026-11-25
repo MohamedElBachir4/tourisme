@@ -7,6 +7,8 @@ import {
   getTransportOptions,
 } from "@/lib/data";
 
+export const instant = false;
+
 export const metadata = {
   title: "Plan your trip",
   description: "Build a custom sustainable itinerary with live pricing in DZD.",

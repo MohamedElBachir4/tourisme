@@ -1,6 +1,8 @@
 import { TripsBrowser } from "@/components/trips/TripsBrowser";
 import { getTrips } from "@/lib/data";
 
+export const instant = false;
+
 export const metadata = {
   title: "Eco-tours",
   description: "Browse sustainable eco-tours across Algeria with Sirius Trail.",
