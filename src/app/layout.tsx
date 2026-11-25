@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { IBM_Plex_Sans_Arabic, Manrope, Outfit } from "next/font/google";
-import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { SiteFooter } from "@/components/layout/SiteFooter";
 import { LOCALE_BOOT } from "@/i18n/config";
 import { LanguageProvider } from "@/i18n/LanguageProvider";
 import "./globals.css";
@@ -69,7 +69,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <main id="main" className="flex-1">
             {children}
           </main>
-          <Footer />
+          <SiteFooter />
         </LanguageProvider>
       </body>
     </html>

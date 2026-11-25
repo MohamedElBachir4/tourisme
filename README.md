@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sirius Trail
 
-## Getting Started
+Sustainable tourism platform for Algeria — public site, trip planner, carbon calculator, bookings, and an admin dashboard.
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Next.js App Router
+- Neon PostgreSQL + Prisma
+- Auth.js (NextAuth v5) Credentials for a single admin
+- EN / FR / AR (+ RTL)
+
+## Local setup
+
+1. Copy `.env.example` to `.env` and fill in values:
+
+```env
+DATABASE_URL="postgresql://...neon.tech/...?sslmode=require"
+DIRECT_URL="postgresql://...neon.tech/...?sslmode=require"
+AUTH_SECRET="generate-a-long-random-string"
+AUTH_URL="http://localhost:3000"
+ADMIN_EMAIL="you@example.com"
+ADMIN_PASSWORD="choose-a-strong-password"
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- `DATABASE_URL` — Neon **pooled** connection (runtime)
+- `DIRECT_URL` — Neon **direct** connection (migrations)
+- `AUTH_SECRET` — long random string for Auth.js sessions
+- `ADMIN_EMAIL` / `ADMIN_PASSWORD` — used by `npm run db:seed` to create the first admin
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. Install and prepare the database:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npx prisma migrate deploy
+npm run db:seed
+npm run dev
+```
 
-## Learn More
+Without `DATABASE_URL`, public pages fall back to local seed content so the UI still runs. Writes (contact, bookings, admin) require Neon.
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Script | Purpose |
+| --- | --- |
+| `npm run dev` | Development server |
+| `npm run build` | `prisma generate && next build` |
+| `npm run build:netlify` | Generate client, run migrations, then build |
+| `npm run db:seed` | Seed destinations, trips, factors, and admin |
+| `npm run db:migrate` | Prisma migrate (dev) |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Admin
 
-## Deploy on Vercel
+- Login: `/admin/login`
+- Dashboard CRUD: destinations (+ gallery URLs), trips, accommodations, activities, transport, emission factors, bookings, messages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Media is URL-based (`/images/...` or absolute URLs). No local disk uploads.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Netlify
+
+`netlify.toml` uses `@netlify/plugin-nextjs` and `npm run build:netlify`.
+
+Set the same env vars in the Netlify UI:
+
+- `DATABASE_URL`
+- `DIRECT_URL`
+- `AUTH_SECRET`
+- `AUTH_URL` (your production URL)
+- `ADMIN_EMAIL` / `ADMIN_PASSWORD` (seed/bootstrap only)
+
+After the first deploy, run seed once (locally against production Neon, or a one-off Netlify/CLI job):
+
+```bash
+npm run db:seed
+```

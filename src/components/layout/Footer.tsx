@@ -19,13 +19,14 @@ export function Footer() {
   const explore = [
     { href: "/#top", label: t.nav.home },
     { href: "/about", label: t.nav.about },
-    { href: "/#destinations", label: t.nav.destinations },
+    { href: "/destinations", label: t.nav.destinations },
+    { href: "/trips", label: t.nav.trips },
   ];
 
   const prepare = [
     { href: "/plan", label: t.nav.plan },
     { href: "/carbon", label: t.nav.carbon },
-    { href: "/#destinations", label: t.nav.explore },
+    { href: "/contact", label: t.nav.contact },
   ];
 
   return (

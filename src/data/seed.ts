@@ -1,0 +1,471 @@
+import type {
+  Accommodation,
+  Activity,
+  Destination,
+  DestinationImage,
+  TransportOption,
+  Trip,
+} from "@/types/database";
+
+export const seedDestinations: Destination[] = [
+  {
+    id: "11111111-1111-1111-1111-111111111101",
+    slug: "ghardaia",
+    wilaya: "Ghardaïa",
+    location: { en: "M'Zab Valley", fr: "Vallée du M'Zab", ar: "وادي مزاب" },
+    name: { en: "Ghardaïa", fr: "Ghardaïa", ar: "غرداية" },
+    description: {
+      en: "Traditional architecture and authentic Saharan culture.",
+      fr: "Architecture traditionnelle et culture saharienne authentique.",
+      ar: "عمارة تقليدية وثقافة صحراوية أصيلة.",
+    },
+    long_description: {
+      en: "Explore the pentapolis of the M'Zab, walk shaded lanes in the ksar, and stay with hosts who keep local building traditions alive.",
+      fr: "Explorez la pentapole du M'Zab, parcourez les ruelles ombragées du ksar et séjournez chez des hôtes qui perpétuent les traditions locales.",
+      ar: "استكشف مدن مزاب الخمس، وامشِ في أزقة القصر المظللة، وأقم عند مضيفين يحافظون على تقاليد البناء المحلية.",
+    },
+    activities: [
+      { en: "Ksar walking tours", fr: "Visites à pied du ksar", ar: "جولات مشي في القصر" },
+      { en: "Handicraft workshops", fr: "Ateliers d'artisanat", ar: "ورش حرف يدوية" },
+      { en: "Oasis gardens", fr: "Jardins d'oasis", ar: "حدائق الواحات" },
+    ],
+    accommodations: [
+      { en: "Family guesthouse", fr: "Maison d'hôtes familiale", ar: "بيت ضيافة عائلي" },
+      { en: "Community lodge", fr: "Hébergement communautaire", ar: "نزل مجتمعي" },
+    ],
+    cover_image: "/images/ghardaia.jpg",
+    published: true,
+    sort_order: 1,
+  },
+  {
+    id: "11111111-1111-1111-1111-111111111102",
+    slug: "tassili",
+    wilaya: "Illizi",
+    location: { en: "Djanet", fr: "Djanet", ar: "جانت" },
+    name: { en: "Tassili n'Ajjer", fr: "Tassili n'Ajjer", ar: "طاسيلي ناجر" },
+    description: {
+      en: "Spectacular desert landscapes and ancient natural heritage.",
+      fr: "Paysages désertiques spectaculaires et patrimoine naturel millénaire.",
+      ar: "مناظر صحراوية مذهلة وتراث طبيعي عريق.",
+    },
+    long_description: {
+      en: "Cross sandstone plateaus with local guides, camp under clear skies, and travel lightly through a protected desert landscape.",
+      fr: "Traversez les plateaux de grès avec des guides locaux, campez sous un ciel clair et voyagez léger dans un paysage désertique protégé.",
+      ar: "اعبر هضاب الحجر الرملي مع مرشدين محليين، وخيّم تحت سماء صافية، وسافر بخفة عبر صحراء محمية.",
+    },
+    activities: [
+      { en: "Guided plateau walks", fr: "Marches guidées sur le plateau", ar: "مسيرات هضبة بمرشد" },
+      { en: "Desert camping", fr: "Campement désertique", ar: "تخييم صحراوي" },
+      { en: "Geology interpretation", fr: "Lecture du paysage", ar: "تفسير المشهد الجيولوجي" },
+    ],
+    accommodations: [
+      { en: "Small desert camp", fr: "Petit campement désertique", ar: "مخيم صحراوي صغير" },
+      { en: "Eco camp", fr: "Camp écologique", ar: "مخيم بيئي" },
+    ],
+    cover_image: "/images/tassili.jpg",
+    published: true,
+    sort_order: 2,
+  },
+  {
+    id: "11111111-1111-1111-1111-111111111103",
+    slug: "djurdjura",
+    wilaya: "Tizi Ouzou",
+    location: { en: "Kabylia", fr: "Kabylie", ar: "القبائل" },
+    name: { en: "Djurdjura Mountains", fr: "Montagnes du Djurdjura", ar: "جبال جرجرة" },
+    description: {
+      en: "Majestic mountains and beautiful natural trails.",
+      fr: "Montagnes majestueuses et sentiers naturels d'une grande beauté.",
+      ar: "جبال شامخة ومسارات طبيعية خلابة.",
+    },
+    long_description: {
+      en: "Hike cedar forests and limestone ridges in Djurdjura National Park, with stays in mountain refuges and village guesthouses.",
+      fr: "Randonnez dans les cèdres et sur les crêtes calcaires du parc national du Djurdjura, avec des séjours en refuge et chez l'habitant.",
+      ar: "تسلّق غابات الأرز وقمم الحجر الجيري في منتزه جرجرة الوطني، مع إقامة في مآوٍ جبلية وبيوت قرى.",
+    },
+    activities: [
+      { en: "Mountain hiking", fr: "Randonnée en montagne", ar: "تسلق الجبال" },
+      { en: "Village visits", fr: "Visites de villages", ar: "زيارات القرى" },
+      { en: "Nature interpretation", fr: "Découverte nature", ar: "استكشاف الطبيعة" },
+    ],
+    accommodations: [
+      { en: "Mountain refuge", fr: "Refuge de montagne", ar: "مأوى جبلي" },
+      { en: "Village guesthouse", fr: "Maison d'hôtes de village", ar: "بيت ضيافة قروي" },
+    ],
+    cover_image: "/images/djurdjura.jpg",
+    published: true,
+    sort_order: 3,
+  },
+  {
+    id: "11111111-1111-1111-1111-111111111104",
+    slug: "taghit",
+    wilaya: "Béchar",
+    location: { en: "Béchar", fr: "Béchar", ar: "بشار" },
+    name: { en: "Taghit", fr: "Taghit", ar: "تاغيت" },
+    description: {
+      en: "Golden dunes and a unique oasis experience.",
+      fr: "Dunes dorées et une expérience d'oasis singulière.",
+      ar: "كثبان ذهبية وتجربة واحة فريدة.",
+    },
+    long_description: {
+      en: "Walk the edge of the Grand Erg, rest in the palm oasis, and learn how local hosts manage water and shade in the Sahara.",
+      fr: "Marchez au bord du Grand Erg, reposez-vous dans la palmeraie et découvrez comment les hôtes locaux gèrent l'eau et l'ombre.",
+      ar: "امشِ على حافة العرق الكبير، واسترح في واحة النخيل، وتعرّف كيف يدير المضيفون المحليون الماء والظل.",
+    },
+    activities: [
+      { en: "Dune walks", fr: "Promenades dans les dunes", ar: "مشي على الكثبان" },
+      { en: "Oasis visits", fr: "Visites d'oasis", ar: "زيارات الواحات" },
+      { en: "Sunset viewpoints", fr: "Points de vue au coucher du soleil", ar: "مشاهد الغروب" },
+    ],
+    accommodations: [
+      { en: "Oasis guesthouse", fr: "Maison d'hôtes d'oasis", ar: "بيت ضيافة في الواحة" },
+      { en: "Eco camp", fr: "Camp écologique", ar: "مخيم بيئي" },
+    ],
+    cover_image: "/images/taghit.jpg",
+    published: true,
+    sort_order: 4,
+  },
+];
+
+export const seedDestinationImages: DestinationImage[] = [
+  {
+    id: "img-g1",
+    destination_id: "11111111-1111-1111-1111-111111111101",
+    url: "/images/ghardaia.jpg",
+    alt: { en: "Ksar Tafilelt near Ghardaïa", fr: "Ksar Tafilelt près de Ghardaïa", ar: "قصر تافيلالت قرب غرداية" },
+    sort_order: 1,
+  },
+  {
+    id: "img-g2",
+    destination_id: "11111111-1111-1111-1111-111111111101",
+    url: "/images/lodge.jpg",
+    alt: { en: "Earthen street in the M'Zab", fr: "Rue en terre dans le M'Zab", ar: "زقاق طيني في مزاب" },
+    sort_order: 2,
+  },
+  {
+    id: "img-t1",
+    destination_id: "11111111-1111-1111-1111-111111111102",
+    url: "/images/tassili.jpg",
+    alt: { en: "Tassili sandstone formations", fr: "Formations de grès du Tassili", ar: "تكوينات طاسيلي الحجرية" },
+    sort_order: 1,
+  },
+  {
+    id: "img-d1",
+    destination_id: "11111111-1111-1111-1111-111111111103",
+    url: "/images/djurdjura.jpg",
+    alt: { en: "Djurdjura peaks", fr: "Sommets du Djurdjura", ar: "قمم جرجرة" },
+    sort_order: 1,
+  },
+  {
+    id: "img-d2",
+    destination_id: "11111111-1111-1111-1111-111111111103",
+    url: "/images/planner.jpg",
+    alt: { en: "Green foothills of Kabylia", fr: "Contreforts verts de Kabylie", ar: "سفوح خضراء في القبائل" },
+    sort_order: 2,
+  },
+  {
+    id: "img-tg1",
+    destination_id: "11111111-1111-1111-1111-111111111104",
+    url: "/images/taghit.jpg",
+    alt: { en: "Dunes near Taghit", fr: "Dunes près de Taghit", ar: "كثبان قرب تاغيت" },
+    sort_order: 1,
+  },
+];
+
+export const seedTrips: Trip[] = [
+  {
+    id: "22222222-2222-2222-2222-222222222201",
+    slug: "mzab-heritage-days",
+    destination_id: "11111111-1111-1111-1111-111111111101",
+    name: {
+      en: "M'Zab Heritage Days",
+      fr: "Journées patrimoniales du M'Zab",
+      ar: "أيام التراث في مزاب",
+    },
+    description: {
+      en: "Five slow days among ksar lanes, palm gardens, and family hosts.",
+      fr: "Cinq jours lents entre ruelles du ksar, jardins de palmiers et hôtes familiaux.",
+      ar: "خمسة أيام هادئة بين أزقة القصر وحدائق النخيل والمضيفين العائليين.",
+    },
+    long_description: {
+      en: "A community-hosted journey focused on architecture, daily life, and respectful visiting in the M'Zab.",
+      fr: "Un voyage hébergé par la communauté, centré sur l'architecture, la vie quotidienne et une visite respectueuse du M'Zab.",
+      ar: "رحلة باستضافة مجتمعية تركز على العمارة والحياة اليومية وزيارة مزاب باحترام.",
+    },
+    duration_days: 5,
+    base_price_dzd: 48500,
+    accommodation_label: {
+      en: "Family guesthouse in the ksar",
+      fr: "Maison d'hôtes familiale dans le ksar",
+      ar: "بيت ضيافة عائلي في القصر",
+    },
+    category: {
+      en: "Community-hosted",
+      fr: "Accueil communautaire",
+      ar: "استضافة مجتمعية",
+    },
+    image_url: "/images/lodge.jpg",
+    activities: [
+      { en: "Ksar walks", fr: "Promenades dans le ksar", ar: "مشي في القصر" },
+      { en: "Craft workshop", fr: "Atelier artisanal", ar: "ورشة حرفية" },
+    ],
+    published: true,
+    sort_order: 1,
+  },
+  {
+    id: "22222222-2222-2222-2222-222222222202",
+    slug: "tassili-plateau-walk",
+    destination_id: "11111111-1111-1111-1111-111111111102",
+    name: {
+      en: "Tassili Plateau Walk",
+      fr: "Marche sur le plateau du Tassili",
+      ar: "مسير هضبة الطاسيلي",
+    },
+    description: {
+      en: "A seven-day guided traverse of sandstone plateaus and quiet camps.",
+      fr: "Une traversée guidée de sept jours sur les plateaux de grès et dans des camps discrets.",
+      ar: "مسير بمرشد لسبعة أيام عبر هضاب الحجر الرملي ومخيمات هادئة.",
+    },
+    long_description: {
+      en: "Travel with local guides, keep to marked routes, and stay in a small desert camp chosen for low impact.",
+      fr: "Voyagez avec des guides locaux, restez sur les itinéraires balisés et dormez dans un petit camp choisi pour son faible impact.",
+      ar: "سافر مع مرشدين محليين، والتزم بالمسارات المعلّمة، وأقم في مخيم صحراوي صغير منخفض الأثر.",
+    },
+    duration_days: 7,
+    base_price_dzd: 96000,
+    accommodation_label: {
+      en: "Small desert camp",
+      fr: "Petit campement désertique",
+      ar: "مخيم صحراوي صغير",
+    },
+    category: {
+      en: "Low-impact desert route",
+      fr: "Route désertique à faible impact",
+      ar: "مسار صحراوي منخفض الأثر",
+    },
+    image_url: "/images/tassili.jpg",
+    activities: [
+      { en: "Plateau hiking", fr: "Randonnée sur le plateau", ar: "تسلق الهضبة" },
+      { en: "Desert camping", fr: "Campement", ar: "تخييم" },
+    ],
+    published: true,
+    sort_order: 2,
+  },
+  {
+    id: "22222222-2222-2222-2222-222222222203",
+    slug: "djurdjura-ridge-days",
+    destination_id: "11111111-1111-1111-1111-111111111103",
+    name: {
+      en: "Djurdjura Ridge Days",
+      fr: "Jours sur les crêtes du Djurdjura",
+      ar: "أيام على قمم جرجرة",
+    },
+    description: {
+      en: "Four days of mountain trails, cedar shade, and a quiet refuge stay.",
+      fr: "Quatre jours de sentiers de montagne, d'ombre de cèdres et de refuge tranquille.",
+      ar: "أربعة أيام من مسارات الجبال وظل الأرز وإقامة هادئة في مأوى.",
+    },
+    long_description: {
+      en: "A compact mountain itinerary in Djurdjura National Park with guided nature interpretation.",
+      fr: "Un itinéraire de montagne compact dans le parc national du Djurdjura, avec une lecture guidée de la nature.",
+      ar: "مسار جبلي موجز في منتزه جرجرة الوطني مع تفسير طبيعي بمرشد.",
+    },
+    duration_days: 4,
+    base_price_dzd: 37200,
+    accommodation_label: {
+      en: "Mountain refuge",
+      fr: "Refuge de montagne",
+      ar: "مأوى جبلي",
+    },
+    category: {
+      en: "Guided nature trails",
+      fr: "Sentiers nature avec guide",
+      ar: "مسارات طبيعية بمرشد",
+    },
+    image_url: "/images/djurdjura.jpg",
+    activities: [
+      { en: "Ridge hiking", fr: "Randonnée sur les crêtes", ar: "تسلق القمم" },
+      { en: "Forest walks", fr: "Promenades en forêt", ar: "مشي في الغابة" },
+    ],
+    published: true,
+    sort_order: 3,
+  },
+];
+
+export const seedAccommodations: Accommodation[] = [
+  {
+    id: "acc-1",
+    code: "local-guesthouse",
+    type: "guesthouse",
+    name: { en: "Local Guesthouse", fr: "Maison d'hôtes locale", ar: "بيت ضيافة محلي" },
+    description: {
+      en: "A family-run stay rooted in the destination.",
+      fr: "Un séjour familial ancré dans la destination.",
+      ar: "إقامة عائلية متجذرة في الوجهة.",
+    },
+    price_per_night_dzd: 6500,
+    destination_id: null,
+    active: true,
+  },
+  {
+    id: "acc-2",
+    code: "eco-camp",
+    type: "eco_camp",
+    name: { en: "Eco Camp", fr: "Camp écologique", ar: "مخيم بيئي" },
+    description: {
+      en: "A light-footprint camp with shared facilities.",
+      fr: "Un camp à faible empreinte avec espaces partagés.",
+      ar: "مخيم خفيف الأثر بمرافق مشتركة.",
+    },
+    price_per_night_dzd: 4800,
+    destination_id: null,
+    active: true,
+  },
+  {
+    id: "acc-3",
+    code: "green-hotel",
+    type: "green_hotel",
+    name: { en: "Green Hotel", fr: "Hôtel vert", ar: "فندق أخضر" },
+    description: {
+      en: "A small hotel following water and waste care practices.",
+      fr: "Un petit hôtel attentif à l'eau et aux déchets.",
+      ar: "فندق صغير يراعي الماء والنفايات.",
+    },
+    price_per_night_dzd: 9200,
+    destination_id: null,
+    active: true,
+  },
+];
+
+export const seedActivities: Activity[] = [
+  {
+    id: "act-1",
+    code: "mountain-hiking",
+    name: { en: "Mountain Hiking", fr: "Randonnée en montagne", ar: "تسلق الجبال" },
+    description: {
+      en: "Guided day hike on marked trails.",
+      fr: "Randonnée guidée d'une journée sur sentiers balisés.",
+      ar: "مسير يومي بمرشد على مسارات معلّمة.",
+    },
+    price_dzd: 3500,
+    active: true,
+  },
+  {
+    id: "act-2",
+    code: "cycling-trails",
+    name: { en: "Cycling Trails", fr: "Pistes cyclables", ar: "مسارات الدراجات" },
+    description: {
+      en: "A supported cycling outing on quiet routes.",
+      fr: "Une sortie vélo accompagnée sur des routes calmes.",
+      ar: "جولة دراجات مصحوبة على طرق هادئة.",
+    },
+    price_dzd: 4000,
+    active: true,
+  },
+  {
+    id: "act-3",
+    code: "handicraft-workshop",
+    name: {
+      en: "Traditional Handicraft Workshop",
+      fr: "Atelier d'artisanat traditionnel",
+      ar: "ورشة حرف يدوية تقليدية",
+    },
+    description: {
+      en: "Learn a local craft with community artisans.",
+      fr: "Apprenez un savoir-faire local avec des artisans.",
+      ar: "تعلّم حرفة محلية مع حرفيين من المجتمع.",
+    },
+    price_dzd: 2800,
+    active: true,
+  },
+  {
+    id: "act-4",
+    code: "cultural-experience",
+    name: {
+      en: "Local Cultural Experience",
+      fr: "Expérience culturelle locale",
+      ar: "تجربة ثقافية محلية",
+    },
+    description: {
+      en: "Share a meal or story session with local hosts.",
+      fr: "Partagez un repas ou un moment de récit avec des hôtes locaux.",
+      ar: "شارك وجبة أو جلسة حكايات مع مضيفين محليين.",
+    },
+    price_dzd: 3200,
+    active: true,
+  },
+  {
+    id: "act-5",
+    code: "nature-exploration",
+    name: { en: "Nature Exploration", fr: "Exploration nature", ar: "استكشاف الطبيعة" },
+    description: {
+      en: "Interpretive walk focused on flora, water, and landscape care.",
+      fr: "Promenade commentée sur la flore, l'eau et le soin du paysage.",
+      ar: "جولة تفسيرية عن النباتات والماء والعناية بالمشهد.",
+    },
+    price_dzd: 3000,
+    active: true,
+  },
+];
+
+export const seedTransport: TransportOption[] = [
+  {
+    id: "tr-1",
+    code: "shared-bus",
+    name: { en: "Shared Bus", fr: "Autocar partagé", ar: "حافلة مشتركة" },
+    description: {
+      en: "Often the lighter choice for a regional journey.",
+      fr: "Souvent le choix le plus léger pour un trajet régional.",
+      ar: "غالبًا الخيار الأخف للتنقل داخل المنطقة.",
+    },
+    price_dzd: 2500,
+    emission_kg_per_km: 0.027,
+    for_planner: true,
+    for_carbon: true,
+    active: true,
+  },
+  {
+    id: "tr-2",
+    code: "hybrid-car",
+    name: { en: "Hybrid Car", fr: "Voiture hybride", ar: "سيارة هجينة" },
+    description: {
+      en: "Flexible road travel with lower fuel use than a gasoline car.",
+      fr: "Un trajet routier souple, moins gourmand qu'une voiture essence.",
+      ar: "تنقل مرن باستهلاك أقل من سيارة البنزين.",
+    },
+    price_dzd: 5500,
+    emission_kg_per_km: 0.12,
+    for_planner: true,
+    for_carbon: false,
+    active: true,
+  },
+  {
+    id: "tr-3",
+    code: "electric-car",
+    name: { en: "Electric Car", fr: "Voiture électrique", ar: "سيارة كهربائية" },
+    description: {
+      en: "Low tailpipe emissions when charging is available.",
+      fr: "Faibles émissions à l'échappement lorsque la recharge est possible.",
+      ar: "انبعاثات عادم منخفضة عند توفر الشحن.",
+    },
+    price_dzd: 6200,
+    emission_kg_per_km: 0.05,
+    for_planner: true,
+    for_carbon: true,
+    active: true,
+  },
+  {
+    id: "tr-4",
+    code: "gasoline-car",
+    name: { en: "Gasoline Car", fr: "Voiture essence", ar: "سيارة بنزين" },
+    description: {
+      en: "Flexible. The impact depends on how many people share the ride.",
+      fr: "Souple. L'impact dépend du nombre de personnes à bord.",
+      ar: "مرنة، ويختلف أثرها بحسب عدد من يتشاركون الرحلة.",
+    },
+    price_dzd: 5000,
+    emission_kg_per_km: 0.171,
+    for_planner: false,
+    for_carbon: true,
+    active: true,
+  },
+];

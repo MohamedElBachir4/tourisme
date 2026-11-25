@@ -47,8 +47,10 @@ export type Dictionary = {
     home: string;
     about: string;
     destinations: string;
+    trips: string;
     plan: string;
     carbon: string;
+    contact: string;
     explore: string;
     language: string;
     openMenu: string;

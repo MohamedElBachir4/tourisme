@@ -18,6 +18,7 @@ export function Header() {
 
 function HeaderWithPathname() {
   const pathname = usePathname();
+  if (pathname?.startsWith("/admin")) return null;
   return <HeaderChrome pathname={pathname} />;
 }
 
@@ -67,9 +68,11 @@ function HeaderChrome({ pathname }: HeaderChromeProps) {
   const links = [
     { href: "/#top", label: t.nav.home },
     { href: "/about", label: t.nav.about },
-    { href: "/#destinations", label: t.nav.destinations },
-    { href: "/#plan", label: t.nav.plan },
-    { href: "/#carbon", label: t.nav.carbon },
+    { href: "/destinations", label: t.nav.destinations },
+    { href: "/trips", label: t.nav.trips },
+    { href: "/plan", label: t.nav.plan },
+    { href: "/carbon", label: t.nav.carbon },
+    { href: "/contact", label: t.nav.contact },
   ];
 
   const close = () => setOpen(false);
@@ -102,7 +105,7 @@ function HeaderChrome({ pathname }: HeaderChromeProps) {
         <div className="col-start-3 flex items-center justify-end gap-2 sm:gap-3">
           <LanguageSwitcher />
           <div className="hidden xl:block">
-            <Button href="/#destinations" className="px-5">
+            <Button href="/destinations" className="px-5">
               {t.nav.explore}
             </Button>
           </div>
@@ -138,7 +141,7 @@ function HeaderChrome({ pathname }: HeaderChromeProps) {
                 {link.label}
               </a>
             ))}
-            <Button href="/#destinations" className="mt-3 w-full" onClick={close}>
+            <Button href="/destinations" className="mt-3 w-full" onClick={close}>
               {t.nav.explore}
             </Button>
           </nav>
